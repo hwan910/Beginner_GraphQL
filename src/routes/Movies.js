@@ -14,9 +14,7 @@ const ALL_MOVIES = gql`
 
 const Movies = () => {
   const { data, loading, error } = useQuery(ALL_MOVIES);
-  if (loading) {
-    return <h1>앗! 잠시만요..</h1>;
-  }
+
   if (error) {
     return <h1>에러 발생</h1>;
   }
